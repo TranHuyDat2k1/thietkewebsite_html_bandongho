@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh toán</title>
+    <script>
+        //kiểm tra Tên nhập đúng k ??
+        function kiemtranten() {
+            var sdt = document.getElementById("txtTen").values;
+            if (ten == "") {
+                document.getElementById("ktra1").innerHTML = "Vui lòng nhập Họ Tên!";
+            } else {
+                if (ten.length < 5 || ten.length > 50) {
+                    document.getElementById("ktra1").innerHTML = "Tên gồm 5 -50 ký tự";
+                } else {
+                    document.getElementById("ktra1").innerHTML = "";
+                }
+
+                for (i = 0; i < ten.length; i++) {
+                    if (!isNaN(ten[i])) {
+                        document.getElementById("ktra1").innerHTML = "Không được nhập ký tự số";
+                    }
+                }
+            }
+        }
+        //kiểm tra số ddienj thoại đúng không ??
+        function kiemtraSDT() {
+            var sdt = document.getElementById("txtSDT").values;
+            if (sdt = "") {
+                document.getElementById("ktra2").innerHTML = "Vui lòng nhập số điện thoại ";
+            } else {
+                if (!isNaN(sdt)) {
+                    document.getElementById("ktra2").innerHTML = "";
+                } else {
+                    document.getElementById("ktra2").innerHTML = " Vui lòng nhạp đúng ký tự";
+                }
+            }
+
+            if (sdt.length < 10 || sdt.length > 11) {
+                document.getElementById("ktra2").innerHTML = "số điện thoại chưa đúng !";
+            }
+
+        }
+    </script>
+</head>
+
+<body style="padding: 20px 0px 0px 60px;">
+    <section>
+        <div id="giohang" style="width: 1200px; margin-left: 100px;">
+            <form action="">
+                <table style="margin-left: 10px; margin-bottom: 30px;">
+
+                    <tr>
+                        <td>
+                            <h2>Nhập thông tin cá nhân:</h2>
+                        </td>
+                        <td>
+                            <h2 style="margin-left: 70px;">Chọn hình thức thanh toán</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Giới tính:</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="GT" checked="true">Nam
+                            <input type="radio" name="GT">Nữ
+                            <td>
+                                <input type="radio" name="thanhtoan" checked="true" style="width:20px; height: 20px; margin-left: 80px;">Thanh toán khi nhận hàng
+                            </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Họ tên:</td>
+                        <tr>
+                            <td><input type="text" id="txtTen" placeholder="Mời bạn nhập Họ tên " name="" class="70" style="padding: 5px;" onblur="kientraten()"><br>
+                                <span id="ktra1" style="color: red;"></span>
+                            </td>
+                            <td>
+                                <input type="radio" name="thanhtoan" style="width: 20px; height: 20px; margin-left: 80px;">Thẻ ín dụng/Thẻ ghi nợ
+                            </td>
+                        </tr>
+                    </tr>
+                    <tr>
+                        <td>Số điện thoại:</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="txtSDT" placeholder="Mời bạn nhập Số điện thoại" name="" size="70" ; style="padding: 5px;" onblur="kiemtraSDT()"><br>
+                            <span id="ktra2" style="color: red;"></span>
+                            <td>
+                                <input type="radio" name="thanhtoan" style="width:20px; height: 20px; margin-left:80px;">Thẻ ATM nội địa
+                            </td>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Email:</td>
+                    </tr>
+                    <tr>
+                        <td><input type="email" placeholder="Mời bạn nhập Email" required name="" size="70" style="padding: 5px;"></td>
+                        <td>
+                            <input type="radio" name="thanhtoan" style="width: 20px; height: 20px; margin-left: 80px;">thanh toán qua Master Card
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Địa chỉ nhận hàng:</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" placeholder="Mời bạn nhập địa chỉ" name="" required size="58" style="padding: 5px;"></td>
+                        <td>
+                            <input type="radio" name="thanhtoan" style="width: 20px; height: 20px;margin-left: 80px;">Thanh toán qua QR Code
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Nhập mã giảm giá (nếu có):</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" placeholder="Mời bạn nhập Mã giảm giá" name="" size="58" style="padding: 5px;">&nbsp;&nbsp;<input type="button" name="" value="Áp dụng" style="padding: 5px;"> </td>
+                        <td>
+                            <input type="radio" name="thanhtoan" style="width: 20px; height: 20px; margin-left: 80px;">Trả góp
+                        </td>
+                    </tr>
+                </table>
+                <input type="submit" name="" value="Thanh Toán" style="width: 180px; height: 40px; background-color: #b99323; margin-top: 10px; color: white; margin-left: 15px;">
+                <button style="width: 180px; height: 40px; background-color: #b99323; margin-top: 10px;"><a href="./giaodien.html" style="text-decoration: none; color: white;">Quay Lại</a></button>
+            </form>
+
+        </div>
+    </section>
+
+</body>
+
+</html>

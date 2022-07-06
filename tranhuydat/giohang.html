@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ Hàng</title>
+    <link rel="stylesheet" href="./giohang.css" />
+    <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="./jquery-3.6.0.min.js"></script>
+
+    <!-- <script>
+        $(document).ready(function() {
+
+            var data = sessionStorage.getItem("order");
+            data = "[" + data + "]";
+            var orderDetails = JSON.parse(data);
+
+            // alert(order.length);
+
+            var items = "";
+            for (var i = 0; i < orderDetails.length; i++) {
+                items += `<div class="cart-item">
+                    <img src="${orderDetails[i].image}" />
+                    <div class="cart-product">
+                        <label class="item-name">${orderDetails[i].name}</label>
+                        <label class="item-size">size: L</label>
+                        <label class="item-delete">Xóa</label>
+                        <label class="item-later">Để mua sau</label>
+                    </div>
+                    <div class="cart-price">
+                        <label class="item-price">${orderDetails[i].price}</label>
+                        <label class="item-old-price"><s>8.400.000</s></label>
+                        <label class="item-discount">-30%</label>
+                    </div>
+                    <div class="cart-quality">
+                        <input class="btn-sub" type="button" value="-" />
+                        <input class="txt-quality" type="text" value="1" />
+                        <input class="btn-plus" type="button" value="+" />
+                    </div>				
+                </div> `;
+            }
+            $("#content-left").html(items);
+
+            $(".cart-amount").text(orderDetails.length);
+            $(".cart-number").text(" (" + orderDetails.length + "Sản phẩm)");
+
+            $(".btn-plus").click(function() {
+                var amount = $(this).prev().attr("value");
+                $(this).prev().attr("value", Number(amount) + 1);
+
+                // alert(amount);
+            });
+
+            $(".btn-sub").click(function() {
+                var amount = $(this).next().attr("value");
+                if (Number(amount) > 1)
+
+                    $(this).next().attr("value", Number(amount) - 1);
+
+                // alert(amount);
+            });
+
+        });
+    </script> -->
+    <!-- <script>
+        $(document).ready(function() {
+
+            var data = sessionStorage.getItem("order");
+            data = "[" + data + "]";
+            var orderDetails = JSON.parse(data);
+
+            // alert(order.length);
+
+            var items = "";
+            for (var i = 0; i < orderDetails.length; i++) {
+                items += `<div class="cart-item">
+					<img src="${orderDetails[i].image}" />
+					<div class="cart-product">
+						<label class="item-name">${orderDetails[i].name}</label>
+					
+						<label class="item-delete">Xóa</label>
+						<label class="item-later">Để mua sau</label>
+					</div>
+					<div class="cart-price">
+						<label class="item-price">${orderDetails[i].price}</label>
+						
+					</div>
+					<div class="cart-quality">
+						<input class="btn-sub" type="button" value="-" />
+						<input class="txt-quality" type="text" value="1" />
+						<input class="btn-plus" type="button" value="+" />
+					</div>				
+				</div> `;
+            }
+            $("#content-left").html(items);
+
+            $(".cart-amount").text(orderDetails.length);
+            $(".cart-number").text(" (" + orderDetails.length + " Sản phẩm)");
+
+        });
+    </script> -->
+    <script>
+        $(document).ready(function() {
+
+            var data = sessionStorage.getItem("order");
+            data = "[" + data + "]";
+            var orderDetails = JSON.parse(data);
+
+            // alert(order.length);
+
+            var items = "";
+            for (var i = 0; i < orderDetails.length; i++) {
+                items += `<div class="cart-item">
+					<img src="${orderDetails[i].image}" />
+					<div class="cart-product">
+						<label class="item-name">${orderDetails[i].name}</label>
+						<label class="item-size">Size: L</label>
+						<label class="item-delete">Xóa</label>
+						<label class="item-later">Để mua sau</label>
+					</div>
+					<div class="cart-price">
+						<label class="item-price">${orderDetails[i].price}</label>
+						<label class="item-old-price"><s>50.000</s></label>
+						<label class="item-discount">-30%</label>
+					</div>
+					<div class="cart-quality">
+						<input class="btn-sub" type="button" value="-" />
+						<input class="txt-quality" type="text" value="1" />
+						<input class="btn-plus" type="button" value="+" />
+					</div>				
+				</div> `;
+            }
+            $("#content-left").html(items);
+
+            $(".cart-amount").text(orderDetails.length);
+            $(".cart-number").text(" (" + orderDetails.length + " Sản phẩm)");
+
+            $(".btn-plus").click(function() {
+                var amount = $(this).prev().attr("value");
+                $(this).prev().attr("value", Number(amount) + 1);
+
+                // alert(amount);
+            });
+
+            $(".btn-sub").click(function() {
+                var amount = $(this).next().attr("value");
+                if (Number(amount) > 1)
+
+                    $(this).next().attr("value", Number(amount) - 1);
+
+                // alert(amount);
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <div id="logo">
+        <img src="./logoD.png" alt="" style="width:80px; height: 100%">
+
+        <div class="timkiem">
+            <li>
+                <p>
+                    <a href=""><img id="giohang" style="width:50px; height:40px; margin-top: -5px; text-align: center;" src="./cart.png" alt="">
+                        <label class="cart-amount">0</label>
+                    </a>
+                </p>
+            </li>
+            <li>
+                <p style="padding-left: 30px;"><a href="./dangnhap.html">Đăng nhập</a> - <a href="./dangky.html">Đăng ký</a></p>
+            </li>
+            <input style="width:200px; height:40px;" type="search" placeholder="Từ khóa tìm kiếm...">
+        </div>
+    </div>
+
+    <menu>
+        <ul>
+
+            <li><a title="Trang chủ" href="./trangchu.html">TRANG CHỦ</a></li>
+            <li><a title="Sản phẩm" href="./sanpham.html">SẢN PHẨM</a>
+                <ul>
+                    <li><a href="">Gucci</a></li>
+                    <li><a href="">Rolex</a></li>
+                    <li><a href="">Omega</a></li>
+                    <li><a href="">Casio</a></li>
+                    <li><a href="#link">Đồng hồ nam</a></li>
+                    <li><a href="#link">Đồng hồ nữ</a></li>
+                    <li><a href="#link">Đồng hồ đôi</a></li>
+                    <li><a href="#link">Đồng hồ new</a></li>
+                    <li><a href="#link">Đồng hồ bán chạy</a></li>
+                    <li><a href="#link">Phụ kiện đồng hồ</a></li>
+
+                </ul>
+            </li>
+            <li><a title="Giới thiệu" href="./gioithieu.html">GIỚI THIỆU</a></li>
+            <li><a title="Bảo hành" href="./baohanh.html">BẢO HÀNH</a></li>
+            <li><a title="Tin khuyến mãi" href="./tinkhuyenmai.html">TIN KHUYẾN MÃI</a></li>
+            <li><a title="Liên hệ" href="./lienhe.html">LIÊN HỆ</a>
+                <ul style="width:100px">
+                    <li><a style="padding:0px;" href="">0396189219</a></li>
+                </ul>
+        </ul>
+    </menu>
+    <div id="content">
+        <div id="main">
+            <div id="content-title col-12">
+                <label class="cart-title">Giỏ Hàng</label>
+                <label class="cart-number">(0 sản phẩm)</label>
+            </div>
+            <div id="content-left" class="col-9 col-m-6 col-s-12"></div>
+
+            <div id="content-right" class="col-3 col-m-4 col-s-12">
+                <div id="user-adress"></div>
+                <div id="user-coupon"></div>
+                <div id="user-payment"></div>
+                <div id="tmp-price">
+                    <label id="tmp-price">Tạm Tính</label>
+                    <label id="tmp-money">250.000VNĐ</label>
+
+                </div>
+                <div id="tmp-price">
+                    <label id="tmp-price">Tổng Tiền</label>
+                    <label id="tmp-money">200.000VNĐ</label>
+
+                </div>
+
+                <input id="btn-payment" type="button" onclick="window.location.href='payment.html'" value="Tiến hành đặt hàng" />
+            </div>
+        </div>
+        <div style="clear: both;"></div>
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>

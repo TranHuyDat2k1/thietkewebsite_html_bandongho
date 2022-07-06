@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ </title>
+    <link rel="stylesheet" href="./giaodien.css" />
+    <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="./jquery-3.6.0.min.js"></script>
+
+    <!-- <script>
+        $(document).ready(function() {
+
+
+            var data = sessionStorage.getItem("order");
+            data = "[" + data + "]";
+            var orderDetails = JSON.parse(data);
+            $(".btn-buy").text(orderDetails.length);
+
+            //alert("I am ready");      khi ấn load trang wbe hiện thông báo //
+
+            // khi click mua
+            $(".btn-buy").click(function() {
+                var p = $(this).parent();
+                var pImg = p.find(".product-img").attr("src");
+                var pName = p.find(".product-name").text();
+                var pPrice = p.find(".product-price").text();
+
+                var product = {
+                    "name": pName,
+                    "image": pImg,
+                    "price": pPrice
+                };
+
+                var orderDetails = sessionStorage.getItem("order");
+                if (orderDetails != null)
+                    orderDetails += "," + JSON.stringify(product);
+                else
+                    orderDetails = JSON.stringify(product);
+
+                // thêm sản phẩm vừa chọn vào sesion
+                sessionStorage.setItem("order", orderDetails);
+
+                //Tăng số lượng ở giỏ hàng 
+                var c = $(".cart-amount").text();
+                var amount = Number(c) + 1;
+                $(".cart-amount").text(amount);
+
+                //alert(pImg + pName + pPrice);
+            });
+        });
+    </script> -->
+
+    <script>
+        $(document).ready(function() {
+            // alert("I am ready")
+            // khi click vào đặt mua
+            $(".btn-buy").click(function() {
+                var p = $(this).parent();
+                var pImg = p.find(".product-img").attr("src");
+                var pName = p.find(".product-name").text();
+                var pPrice = p.find(".product-price").text();
+
+                var spban = {
+                    "name": pName,
+                    "image": pImg,
+                    "price": pPrice,
+                }; // alert(pImg+pName+pPrice);
+                var orderDetails = sessionStorage.getItem("order");
+                if (orderDetails != null)
+                    orderDetails += "," + JSON.stringify(spban);
+                else
+                    orderDetails = JSON.stringify(spban);
+
+                // alert(orderDetails);
+                //thêm sản phẩm vừa chọn vào session
+                sessionStorage.setItem("order", orderDetails);
+
+                //tăng số lượng ở giỏ hàng
+                var c = $(".cart-amount").text();
+                var amount = Number(c) + 1;
+                $(".cart-amount").text(amount);
+
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="logo">
+        <img src="./logoD.png" alt="" style="width:80px; height: 100%">
+
+        <div class="timkiem">
+            <li>
+                <p>
+                    <a href="./giohang.html"><img id="giohang" style="width:50px; height:40px; margin-top: -5px; text-align: center;" src="./cart.png" alt="">
+                        <label class="cart-amount">0</label>
+                    </a>
+                </p>
+            </li>
+            <li>
+                <p style="padding-left: 30px;"><a href="./dangnhap.html">Đăng nhập</a> - <a href="./dangky.html">Đăng ký</a></p>
+            </li>
+            <input style="width:200px; height:40px;" type="search" placeholder="Từ khóa tìm kiếm...">
+        </div>
+    </div>
+
+    <menu>
+        <ul>
+
+            <li><a title="Trang chủ" href="./trangchu.html">TRANG CHỦ</a></li>
+            <li><a title="Sản phẩm" href="./sanpham.html">SẢN PHẨM</a>
+                <ul>
+                    <li><a href="">Gucci</a></li>
+                    <li><a href="">Rolex</a></li>
+                    <li><a href="">Omega</a></li>
+                    <li><a href="">Casio</a></li>
+                    <li><a href="#link">Đồng hồ nam</a></li>
+                    <li><a href="#link">Đồng hồ nữ</a></li>
+                    <li><a href="#link">Đồng hồ đôi</a></li>
+                    <li><a href="#link">Đồng hồ new</a></li>
+                    <li><a href="#link">Đồng hồ bán chạy</a></li>
+                    <li><a href="#link">Phụ kiện đồng hồ</a></li>
+
+                </ul>
+            </li>
+            <li><a title="Giới thiệu" href="./gioithieu.html">GIỚI THIỆU</a></li>
+            <li><a title="Bảo hành" href="./baohanh.html">BẢO HÀNH</a></li>
+            <li><a title="Tin khuyến mãi" href="./tinkhuyenmai.html">TIN KHUYẾN MÃI</a></li>
+            <li><a title="Liên hệ" href="./lienhe.html">LIÊN HỆ</a>
+                <ul style="width:100px">
+                    <li><a style="padding:0px;" href="">0396189219</a></li>
+                </ul>
+        </ul>
+    </menu>
+
+    <nav>
+
+        <h1>ĐỒNG HỒ BÁN CHẠY NHẤT</h1>
+        <p style="font-size: 17px; text-align: center; margin-top: 10px;">Chúng tôi cam kết mang lại những giá trị cao nhất, chế độ hậu mãi tốt nhất & đồng hồ chính hãng cho khách hàng</p>
+        <hr>
+        <br>
+        <div id="spban">
+            <img class="product-img" src="dongho1.jpg" alt="dongho1" />
+            <label class="product-name" style="padding-left: 5px ;">Lamborghini-Nam Sapphia</label><br />
+            <label><s>12.000.000VND</s></label><label class="product-price">8.400.000VND</label>
+            <input class="btn-buy" type="button" value="mua ngay" />
+            <a href="./chitiet.html">
+                <input class="btn-view" type="button" value="chi tiết">
+            </a>
+        </div>
+        <div id="spban">
+            <img class="product-img" src="dongho2.jpg" alt="dongho2" />
+            <label class="product-name">Rolex-Nam Sapphia</label><br />
+            <label><s>9.999.999VND</s></label><label class="product-price">8.400.000VND</label>
+            <input class="btn-buy" type="button" value="mua ngay" />
+            <input class="btn-view" type="button" value="chi tiết">
+        </div>
+        <div id="spban">
+            <img class="product-img" src="dongho3.jpg" alt="dongho3" />
+            <label class="product-name">Galio-Nam Sapphia</label><br />
+            <label><s>2.000.000VND</s></label><label class="product-price">1.400.000VND</label>
+            <input class="btn-buy" type="button" value="mua ngay" />
+            <input class="btn-view" type="button" value="chi tiết">
+        </div>
+        <div id="spban">
+            <img class="product-img" src="sp3.jpg" alt="sp3" />
+            <label class="product-name">Omega-Nam Sapphia</label><br />
+            <label><s>1.000.000VND</s></label><label class="product-price">800.000VND</label>
+            <input class="btn-buy" type="button" value="mua ngay" />
+            <input class="btn-view" type="button" value="chi tiết">
+        </div>
+        <div id="spban">
+            <img class="product-img" src="dong5.jpg " alt="dh5" />
+            <label class="product-name">Rolex-Nữ Sapphia</label><br />
+            <label><s>1.000.000VND</s></label><label class="product-price">800.000VND</label>
+            <input class="btn-buy" type="button" value="mua ngay" />
+            <input class="btn-view" type="button" value="chi tiết">
+        </div>
+        <div id="spban">
+            <img class="product-img" src="sp3.jpg " alt="sp3" />
+            <label class="product-name">Omega-Nữ Sapphia</label><br />
+            <label><s>9.999.999VND</s></label><label class="product-price">8.400.000VND</label>
+            <input class="btn-buy" type="button" value="mua ngay" />
+            <input class="btn-view" type="button" value="chi tiết">
+        </div>
+        <div id="spban">
+            <img class="product-img" src="sp4.jpg" alt="sp4" />
+            <label class="product-name">Galio-Nữ Sapphia</label><br />
+            <label><s>1.000.000VND</s></label><label class="product-price">800.000VND</label>
+            <input class="btn-buy" type="button" value="mua ngay" />
+            <input class="btn-view" type="button" value="chi tiết">
+        </div>
+        <div id="spban">
+            <img class="product-img" src="sp5.jpg" alt="sp5" />
+            <label class="product-name">Swan-Nam Sapphia</label><br />
+            <label><s>12.000.000VND</s></label><label class="product-price">8.400.000VND</label>
+            <input class="btn-buy" type="button" value="mua ngay" />
+            <input class="btn-view" type="button" value="chi tiết">
+        </div>
+        <h1>ĐỒNG HỒ ĐÔI</h1>
+        <hr>
+        <div id="spban">
+            <img class="product-img" src="doi1.jpg" alt="#" />
+            <label class="product-name">Dior-Đôi Sapphia</label><br />
+            <label><s>15.000.000VND</s></label><label class="product-price">9.400.000VND</label>
+            <input class="btn-buy" type="button" value="mua ngay" />
+            <input class="btn-view" type="button" value="chi tiết">
+        </div>
+        <div id="spban">
+            <img class="product-img" src="doi2.jpg" alt="#" />
+            <label class="product-name">Puma-Đôi Sapphia</label><br />
+            <label><s>5.000.000VND</s></label><label class="product-price">4.400.000VND</label>
+            <input class="btn-buy" type="button" value="mua ngay" />
+            <input class="btn-view" type="button" value="chi tiết">
+        </div>
+        <div id="spban">
+            <img class="product-img" src="doi3.jpg" alt="#" />
+            <label class="product-name">Ebel-Đôi Sapphia</label><br />
+            <label><s>7.000.000VND</s></label><label class="product-price">5.400.000VND</label>
+            <input class="btn-buy" type="button" value="mua ngay" />
+            <input class="btn-view" type="button" value="chi tiết">
+        </div>
+        <div id="spban">
+            <img class="product-img" src="doi4.jpg" alt="#" />
+            <label class="product-name">Seiko-Đôi Sapphia</label><br />
+            <label><s>8.000.000VND</s></label><label class="product-price">6.400.000VND</label>
+            <input class="btn-buy" type="button" value="mua ngay" />
+            <input class="btn-view" type="button" value="chi tiết">
+        </div>
+        <div id="spban">
+            <img class="product-img" src="doi5.jpg" alt="#" />
+            <label class="product-name">Zenith-Đôi Sapphia</label><br />
+            <label><s>11.000.000VND</s></label><label class="product-price">8.400.000VND</label>
+            <input class="btn-buy" type="button" value="mua ngay" />
+            <input class="btn-view" type="button" value="chi tiết">
+        </div>
+        <div id="spban">
+            <img class="product-img" src="doi6.jpg" alt="#" />
+            <label class="product-name">Oris-Đôi Sapphia</label><br />
+            <label><s>9.000.000VND</s></label><label class="product-price">8.400.000VND</label>
+            <input class="btn-buy" type="button" value="mua ngay" />
+            <input class="btn-view" type="button" value="chi tiết">
+        </div>
+        <div id="spban">
+            <img class="product-img" src="doi7.jpg" alt="#" />
+            <label class="product-name">Cartier-Đôi Sapphia</label><br />
+            <label><s>13.000.000VND</s></label><label class="product-price">8.800.000VND</label>
+            <input class="btn-buy" type="button" value="mua ngay" />
+            <input class="btn-view" type="button" value="chi tiết">
+        </div>
+        <div id="spban">
+            <img class="product-img" src="doi8.jpg" alt="#" />
+            <label class="product-name">Victoria-Đôi Sapphia</label><br />
+            <label><s>6.000.000VND</s></label><label class="product-price">4.400.000VND</label>
+            <input class="btn-buy" type="button" value="mua ngay" />
+            <input class="btn-view" type="button" value="chi tiết">
+        </div>
+    </nav>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <h3>Giới thiệu</h3>
+                    <p>Đ/C: Khoái Châu-Hưng Yên</p>
+                    <p>Phục vụ khách hàng 24/7</p>
+                    <p>
+                        <i class="fa fa-envelope-o"></i><a href="mailto:lionkingday2001@gmail.com">lionkingday2001@gmail.com</a>
+                    </p>
+                    <p>
+                        <i class="fa fa-phone-square"></i><a href="#">0396189219</a>
+                    </p>
+                    <p>
+                        <i class="fa fa-check-square-o"></i>Cam kết bán hàng chính hãng, nói không với hàng replica, fake...
+                    </p>
+                </div>
+                <div class="col-4">
+                    <h3>THONG TIN THANH LY</h3>
+                    <p><a href="#">Giới thiệu</a></p>
+                    <p><a href="#">Điều khoản sử dụng</a></p>
+                    <p><a href="#">chính sách bảo mật</a></p>
+                    <p><a href="#">Thông tin liên hệ</a></p>
+                </div>
+                <div class="clo-4">
+                    <h3>Theo dõi chúng tôi tại</h3>
+                    <a href="https://www.facebook.com/tran.huy.dat.2k1" class="social-icon" target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.facebook.com/tran.huy.dat.2k1" class="social-icon" target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a href="mailto:lionkingday2001@gmail.com" class="social-icon" target="_blank"><i class="fa fa-google"></i></a>
+                    <a href="https://www.youtube.com/feed/my_videos" class="social-icon" target="_blank"><i class="fa fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/tran.huy.dat.2k1/?hl=vi" class="social-icon" target="_blank"><i class="fa fa-instagram"></i></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="copy">
+        <p>&copy; 2021 Develop by Dat Kem</p>
+    </div>
+</body>
+
+</html>

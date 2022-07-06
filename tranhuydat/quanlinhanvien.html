@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đồng Hồ</title>
+    <link rel="stylesheet" href="./manager.css">
+    <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <span>Đồng Hồ</span>
+        <ul>
+            <li>
+                <a href="./trangchu.html"><i class="fa fa-share" aria-hidden="true"></i>Quay lại trang chủ</a>
+            </li>
+            <li>
+                <a href="#">Admin<i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
+            </li>
+        </ul>
+    </header>
+    <div id="manage-menu">
+        <div class="title-menu">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+            <span>Danh mục quản lí</span>
+        </div>
+        <div class="manage-menu-items">
+            <a href="loaidongho.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Loại đồng hồ</a>
+            <a href="dongho.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Đồng hồ</a>
+            <a href="donhang.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Đơn hàng</a>
+            <a href="quanlinhanvien.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nhân viên</a>
+            <a href="nhacungcap.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nhà cung cấp</a>
+            <a href="nguoidung.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Người dùng</a>
+            <a href="baiviet.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bài viết</a>
+            <a href="dichvu.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dịch vụ</a>
+            <a href="thongke.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thống kê</a>
+        </div>
+    </div>
+    <div id="manage-content">
+        <div class="title-manage">
+            <h2>Quản lí nhân viên </h2>
+            <button id="btnInsert" onclick="insert()">Thêm nhân viên </button>
+            <form action="" method="POST">
+                <input type="text" name="search" placeholder="search">
+                <button><i style="color: white;" class="fa fa-search fa-1x" aria-hidden="true"></i></button>
+            </form>
+        </div>
+        <div class="manage-table-content" id="list">
+            <div class="table">
+                <table border="1" cellspacing="0" cellpadding="0">
+                    <caption style="font-size: 20px; color: #A2A2A2;">--Danh sách nhân viên--</caption>
+                    <thead>
+                        <tr style="height: 30px;">
+                            <th width="50">STT</th>
+                            <th width="110">Mã nhân viên</th>
+                            <th width="150">Tên nhân viên</th>
+                            <th width="180">Địa chỉ</th>
+                            <th width="100">SĐT</th>
+                            <th width="100">Email</th>
+                            <th width="90">Chức vụ</th>
+                            <th width="90">Thời gian</th>
+                            <th width="100">Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody style="text-align: center;">
+                        <tr>
+                            <td>1</td>
+                            <td>NV01</td>
+                            <td>Trịnh Hoài Nam</td>
+                            <td>Từ Sơn -Bắc Ninh</td>
+                            <td>0962134562</td>
+                            <td>
+                                nammonaco@gmail.com
+                            </td>
+                            <td>Quản lí</td>
+                            <td>Full-time</td>
+                            <td>
+                                <button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+                                <button><i class="fa fa-trash" aria-hidden="true"></i></button>
+                            </td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>NV02</td>
+                            <td>Trần Huy Thịnh</td>
+                            <td>Kim Động - Hưng Yên</td>
+                            <td>0391643275</td>
+                            <td>
+                                thinhtranhuy@gmail.com
+                            </td>
+                            <td>Nhân viên</td>
+                            <td>Full-time</td>
+                            <td>
+                                <button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+                                <button><i class="fa fa-trash" aria-hidden="true"></i></button>
+                            </td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>NV03</td>
+                            <td>Dương Văn Ba</td>
+                            <td>Yên Mỹ - Hưng Yên</td>
+                            <td>0316426547</td>
+                            <td>
+                                babaconsao@gmail.com
+                            </td>
+                            <td>Nhân viên</td>
+                            <td>Full-time</td>
+                            <td>
+                                <button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+                                <button><i class="fa fa-trash" aria-hidden="true"></i></button>
+                            </td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>NV04</td>
+                            <td>Bùi Thu Phương</td>
+                            <td>Gia Khánh - Gia Lộc</td>
+                            <td>0236514956</td>
+                            <td>
+                                phuongbuithu@gmail.com
+                            </td>
+                            <td>Nhân viên</td>
+                            <td>Full-time</td>
+                            <td>
+                                <button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+                                <button><i class="fa fa-trash" aria-hidden="true"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>NV05</td>
+                            <td>Tbùi Kim Oanh</td>
+                            <td>Từ Sơn -Bắc Ninh</td>
+                            <td>0321659613</td>
+                            <td>
+                                oanhoanhbui@gmail.com
+                            </td>
+                            <td>Nhân viên</td>
+                            <td>Full-time</td>
+                            <td>
+                                <button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+                                <button><i class="fa fa-trash" aria-hidden="true"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>NV06</td>
+                            <td>Đỗ Văn bắc</td>
+                            <td>Bỉm Sơn - Thanh Hóa</td>
+                            <td>0316547621</td>
+                            <td>
+                                bacbacotam@gmail.com
+                            </td>
+                            <td>Nhân viên</td>
+                            <td>Part-time</td>
+                            <td>
+                                <button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+                                <button><i class="fa fa-trash" aria-hidden="true"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>NV07</td>
+                            <td>Nguyễn Bá Bảo</td>
+                            <td>Khoái châu - Hưng Yên</td>
+                            <td>0364192643</td>
+                            <td>
+                                baodanang@gmail.com
+                            </td>
+                            <td>Quản lí</td>
+                            <td>Part-time</td>
+                            <td>
+                                <button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+                                <button><i class="fa fa-trash" aria-hidden="true"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="inserted" id="insert">
+            <h3>Thêm nhân viên</h3>
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>Mã nhân viên:</td>
+                    <td>
+                        <input type="text" name="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tên nhân viên:</td>
+                    <td>
+                        <input type="text" name="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Địa chỉ:</td>
+                    <td>
+                        <input type="text" name="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Số điện thoại:</td>
+                    <td>
+                        <input type="text" name="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td>
+                        <input type="text" name="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Vị trí:</td>
+                    <td>
+                        <input type="text" name="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Thời gian làm việc:</td>
+                    <td>
+                        <input type="text" name="">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button>Thêm</button>
+                        <button>Reset</button>
+                        <button onclick="back()">Quay lại</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function insert() {
+            document.getElementById('list').style.display = 'none';
+            document.getElementById('insert').style.display = 'block';
+            document.getElementById('btnInsert').style.opacity = '0.3';
+        }
+
+        function back() {
+            document.getElementById('list').style.display = 'block';
+            document.getElementById('insert').style.display = 'none';
+            document.getElementById('btnInsert').style.opacity = '1'
+        }
+    </script>
+
+</body>
+
+</html>

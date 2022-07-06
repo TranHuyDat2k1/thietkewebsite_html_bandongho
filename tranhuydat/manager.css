@@ -1,0 +1,209 @@
+html,
+body {
+    margin: 0;
+}
+
+header {
+    float: left;
+    width: 100%;
+    height: 45px;
+    background-color: #2A2A2A;
+}
+
+header span {
+    float: left;
+    font-size: 30px;
+    color: #b99323;
+    margin-left: 24px;
+    margin-top: 5px;
+}
+
+header ul {
+    float: right;
+    list-style-type: none;
+}
+
+header ul li {
+    display: inline-block;
+    float: left;
+}
+
+header ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #b99323;
+    font-size: 16px;
+    padding: 2px 8px;
+}
+
+#manage-menu {
+    float: left;
+    width: 20%;
+    height: 1000px;
+    background-color: #2A2A2A;
+    border-top: 1px solid black;
+}
+
+#manage-menu .title-menu {
+    width: 100%;
+    height: 45px;
+    background-color: #2A2A2A;
+}
+
+.title-menu * {
+    color: white;
+    font-size: 20px;
+    padding-left: 4px;
+    padding-top: 10px;
+}
+
+.manage-menu-items a {
+    width: 100%;
+    height: 30px;
+    position: relative;
+    display: block;
+    background-color: #2A2A2A;
+    text-decoration: none;
+    border-top: 1px solid black;
+    font-size: 17px;
+    color: white;
+    padding-top: 10px;
+}
+
+.manage-menu-items a:hover {
+    color: #00d2ff;
+    background-color: black;
+}
+
+.manage-menu-items:last-child {
+    /*gạch chân dòng cuối thống kê */
+    border-bottom: 1px solid black;
+}
+
+
+/*====================================content*/
+
+#manage-content {
+    width: 80%;
+    height: 600px;
+    float: left;
+    background-color: #E0E0E0;
+}
+
+.title-manage {
+    width: 100%;
+    height: 110px;
+    border-bottom: 1px solid #b99323;
+}
+
+.title-manage h2 {
+    width: 90%;
+    float: left;
+    margin-left: 30px;
+}
+
+.title-manage>button {
+    cursor: pointer;
+    width: 180px;
+    height: 35px;
+    float: left;
+    margin-left: 70px;
+    font-size: 16px;
+    background-color: #b99323;
+    border: 1px solid #b99323;
+    font-weight: bold;
+    /* đậm chữu thêm nhà cung cấp */
+    border-radius: 3px;
+}
+
+.title-manage>form {
+    float: right;
+    padding-right: 10px;
+    padding-top: 4px;
+}
+
+.title-manage>form>input {
+    height: 25px;
+    float: left;
+    border: 1px solid #b99323;
+}
+
+.title-manage>form>button {
+    cursor: pointer;
+    height: 29px;
+    float: left;
+    border: 1px solid #b99323;
+    background-color: #b99323;
+}
+
+
+/*==============================table*/
+
+.manage-table-content {
+    float: left;
+    width: 100%;
+    height: auto;
+    background-color: white;
+}
+
+.manage-table-content h2 {
+    font-size: 17px;
+    color: #878989;
+}
+
+.table {
+    width: 100%;
+    height: auto;
+    float: left;
+    background-color: white;
+    padding-top: 10px;
+}
+
+.table table {
+    border: 1px solid #C9C9C9;
+}
+
+.table table tr {
+    height: 40px;
+}
+
+.table table button {
+    background-color: #b99323;
+    border: 1px solid #b99323;
+    cursor: pointer;
+    border-radius: 2px;
+    width: 30px;
+    height: 30px;
+}
+
+.table table img {
+    margin: 5px;
+    width: 130px;
+    height: 120px;
+}
+
+.table table tr:hover {
+    background-color: #D9D9D9;
+}
+
+
+/*=================inserted*/
+
+.inserted {
+    padding-left: 200px;
+    display: none;
+}
+
+.inserted h3 {
+    font-size: 22px;
+}
+
+.inserted table {
+    padding-left: 80px;
+}
+
+.inserted table td {
+    font-size: 18px;
+}
+
+.inserted table button {}

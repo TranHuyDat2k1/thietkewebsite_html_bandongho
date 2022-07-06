@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết </title>
+    <link rel="stylesheet" href="./chitiet.css" />
+    <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+    <scrip src="./jquery-3.6.0.min.js"></scrip>
+    <script>
+        $(document).ready(function() {
+
+
+            var data = sessionStorage.getItem("order");
+            data = "[" + data + "]";
+            var orderDetails = JSON.parse(data);
+            $(".btn-buy").text(orderDetails.length);
+
+            //alert("I am ready");      khi ấn load trang wbe hiện thông báo //
+
+            // khi click mua
+            $(".btn-buy").click(function() {
+                var p = $(this).parent();
+                var pImg = p.find(".product-img").attr("src");
+                var pName = p.find(".product-name").text();
+                var pPrice = p.find(".product-price").text();
+
+                var spban = {
+                    "name": pName,
+                    "image": pImg,
+                    "price": pPrice
+                };
+
+                var orderDetails = sessionStorage.getItem("order");
+                if (orderDetails != null)
+                    orderDetails += "," + JSON.stringify(spban);
+                else
+                    orderDetails = JSON.stringify(spban);
+
+                // thêm sản phẩm vừa chọn vào sesion
+                sessionStorage.setItem("order", orderDetails);
+
+                //Tăng số lượng ở giỏ hàng 
+                var c = $(".cart-amount").text();
+                var amount = Number(c) + 1;
+                $(".cart-amount").text(amount);
+
+                //alert(pImg + pName + pPrice);
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <div id="logo">
+        <img src="./logoD.png" alt="">
+
+        <div class="timkiem">
+            <li>
+                <p>
+                    <a href="./giohang.html"><img id="giohang" style="width:50px; height:40px; margin-bottom: -4px; text-align: center;" src="./cart.png" alt="">
+                        <label class="cart-amount">0</label>
+                    </a>
+                </p>
+            </li>
+            <li>
+                <p style="padding-left: 30px; padding-top: 10px;"><a href="./dangnhap.html">Đăng nhập</a> - <a href="./dangky.html">Đăng ký</a></p>
+            </li>
+            <input style="width:200px; height:40px;" type="search" placeholder="Từ khóa tìm kiếm...">
+        </div>
+    </div>
+
+    <menu>
+        <ul>
+
+            <li><a title="Trang chủ" href="./trangchu.html">TRANG CHỦ</a></li>
+            <li><a title="Sản phẩm" href="./sanpham.html">SẢN PHẨM</a>
+                <ul>
+                    <li><a href="">Gucci</a></li>
+                    <li><a href="">Rolex</a></li>
+                    <li><a href="">Omega</a></li>
+                    <li><a href="">Casio</a></li>
+                    <li><a href="#link">Đồng hồ nam</a></li>
+                    <li><a href="#link">Đồng hồ nữ</a></li>
+                    <li><a href="#link">Đồng hồ đôi</a></li>
+                    <li><a href="#link">Đồng hồ new</a></li>
+                    <li><a href="#link">Đồng hồ bán chạy</a></li>
+                    <li><a href="#link">Phụ kiện đồng hồ</a></li>
+
+                </ul>
+            </li>
+            <li><a title="Giới thiệu" href="./gioithieu.html">GIỚI THIỆU</a></li>
+            <li><a title="Bảo hành" href="./baohanh.html">BẢO HÀNH</a></li>
+            <li><a title="Tin khuyến mãi" href="./tinkhuyenmai.html">TIN KHUYẾN MÃI</a></li>
+            <li><a title="Liên hệ" href="./lienhe.html">LIÊN HỆ</a>
+                <ul style="width:100px">
+                    <li><a style="padding:0px;" href="">0396189219</a></li>
+                </ul>
+        </ul>
+    </menu>
+
+
+
+    <nav>
+        <div style="width:1024px;height: 60px;" class="ten">
+            <a href="./trangchu.html"><img src="./quaylai.png" alt=""></a>
+            <a style="color: blue;" href="">Kem.com </a>» <a href="">Đồng Hồ </a>» <a href="">Đồng Hồ Nam </a> » Lamborghini-Nam Sapphia
+        </div>
+
+        <section class="tren">
+
+            <img class="left product-img" src="./dongho1.jpg" alt="">
+
+            <article class="right">
+
+                <label class="product-name">Lamborghini-Nam Sapphia</label>
+                <label><s>12.000.000VNĐ</s></label><label class="product-price">8.400.000VNĐ</label>
+
+                <p style="margin: 20px;">(Giá Tiết Kiệm: <strong style="color: rgb(117, 117, 207);">3.600.000VND</strong>)</p>
+                <table>
+                    <tr>
+                        <td>Mua Online Giảm Ngay 30% - 50%</td>
+                    </tr>
+                    <tr>
+                        <td>Miễn phí vận chuyển trên toàn quốc</td>
+                    </tr>
+                    <tr>
+                        <td>Bảo hành chính hãng</td>
+                    </tr>
+                    <tr>
+                        <td>Đổi hàng miễn phí trong 7 ngày khi chưa sử dụng</td>
+                    </tr>
+                    <tr>
+                        <td>Tặng khăn lau & Giảm 50% cho 2 lần thay dây da đồng hồ tiếp theo</td>
+                    </tr>
+                </table>
+                <li>
+                    <input class="btn-buy" type="button" value="Mua Ngay" />
+
+                </li>
+            </article>
+        </section>
+        <section class="duoi">
+            <h1>THÔNG TIN BỔ SUNG</h1>
+            <hr>
+            <table class="bosung">
+                <tr>
+                    <td id="trai"><b>Bảo hành chính hãng</b></td>
+                    <td id="phai">Quốc Tế 1 Năm</td>
+                </tr>
+                <tr>
+                    <td id="trai"><b>Chống nước</b></td>
+                    <td id="phai">5 ATM (50m)</td>
+                </tr>
+                <tr>
+                    <td id="trai"><b>Dạng mặt số</b></td>
+                    <td id="phai">Vuông</td>
+                </tr>
+                <tr>
+                    <td id="trai"><b>Giới tính</b></td>
+                    <td id="phai">Nữ</td>
+                </tr>
+                <tr>
+                    <td id="trai"><b>Loại dây</b></td>
+                    <td id="phai">Dây Inox (Thép Không Gỉ) </td>
+                </tr>
+                <tr>
+                    <td id="trai"><b>Loại kính</b></td>
+                    <td id="phai">Resin Glass (Kính Nhựa)</td>
+                </tr>
+                <tr>
+                    <td id="trai"><b>Loại máy</b></td>
+                    <td id="phai">Pin (Quartz)</td>
+                </tr>
+                <tr>
+                    <td id="trai"><b>Size mặt số</b></td>
+                    <td id="phai">38,9×35 mm</td>
+                </tr>
+                <tr>
+                    <td id="trai"><b>Hãng</b></td>
+                    <td id="phai">Gucci</td>
+                </tr>
+                <tr>
+                    <td id="trai"><b>Thương hiệu</b></td>
+                    <td id="phai"> Nhật Bản</td>
+                </tr>
+            </table>
+            <img src="./thong-so-ky-thuat-dong-ho-shopdongho.jpg" alt="" />
+        </section>
+        <div class="mota">
+            <h2>MÔ TẢ</h2>
+            <hr>
+            <p style="margin: 20px;">Một trong những chiếc đồng hồ siêu phổ biến ngày nay chính là đồng hồ Lamborghini-Nam Sapphia. Có lẽ bạn cũng không lạ lẫm gì với chiếc đồng hồ này, bởi vì chỉ cần vô tình bước trên phố bạn cũng có thể lướt ra vài người mang chúng. Hãy cùng
+                Kem.com tìm hiểu thêm về sức hút của chiếc đồng hồ hot trend này nhé.</p>
+            <p style="margin: 20px;">Dây đeo đồng hồ <strong style="color: cornflowerblue;">Lamborghini-Nam Sapphia</strong> có thiết kế sang trọng, cá tính. Chất liệu da chuyên dụng cho ngành đồng hồ giúp tăng độ bền của sản phẩm, dễ dàng đánh bóng khi khách hàng có nhu cầu
+                làm mới.</p>
+        </div>
+        <br>
+        <br>
+    </nav>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <h3>Giới thiệu</h3>
+                    <p>Đ/C: Khoái Châu-Hưng Yên</p>
+                    <p>Phục vụ khách hàng 24/7</p>
+                    <p>
+                        <i class="fa fa-envelope-o"></i><a href="mailto:lionkingday2001@gmail.com">lionkingday2001@gmail.com</a>
+                    </p>
+                    <p>
+                        <i class="fa fa-phone-square"></i><a href="#">0396189219</a>
+                    </p>
+                    <p>
+                        <i class="fa fa-check-square-o"></i>Cam kết bán hàng chính hãng, nói không với hàng replica, fake...
+                    </p>
+                </div>
+                <div class="col-4">
+                    <h3>THÔNG TIN CỬA HÀNG </h3>
+                    <p><a href="#">Giới thiệu</a></p>
+                    <p><a href="#">Điều khoản sử dụng</a></p>
+                    <p><a href="#">chính sách bảo mật</a></p>
+                    <p><a href="#">Thông tin liên hệ</a></p>
+                </div>
+                <div class="clo-4">
+                    <h3>Theo dõi chúng tôi tại</h3>
+                    <a href="https://www.facebook.com/tran.huy.dat.2k1" class="social-icon" target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.facebook.com/tran.huy.dat.2k1" class="social-icon" target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a href="mailto:lionkingday2001@gmail.com" class="social-icon" target="_blank"><i class="fa fa-google"></i></a>
+                    <a href="https://www.youtube.com/feed/my_videos" class="social-icon" target="_blank"><i class="fa fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/tran.huy.dat.2k1/?hl=vi" class="social-icon" target="_blank"><i class="fa fa-instagram"></i></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="copy">
+        <p>&copy; 2021 Develop by Dat Kem</p>
+    </div>
+</body>
+
+</html>

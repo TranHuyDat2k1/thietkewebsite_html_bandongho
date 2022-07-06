@@ -1,0 +1,461 @@
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        body {
+            width: 1024px;
+            margin: 0px auto;
+        }
+        
+        #menu {
+            display: none;
+        }
+        
+        #slideshow {
+            display: block;
+            width: 100%;
+            height: 30vh;
+        }
+        
+        .footer {
+            width: 1024px;
+            margin-top: 14px;
+            background-color: #aaa;
+            color: black;
+            font-size: 12px;
+            content: "";
+            clear: both;
+            height: 200px;
+        }
+        
+        #menu {
+            display: none;
+        }
+        
+        #slideshow {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        
+        #menu {
+            height: 50px;
+            width: 100%;
+            background-color: orange;
+            display: none;
+        }
+        
+        #slideshow {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        
+        header {
+            width: 100%;
+            height: 360px;
+        }
+        
+        #sanpham {
+            width: 300px;
+            height: 360px;
+            float: left;
+        }
+        
+        #sanpham h2 {
+            color: blue;
+            width: 300px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+        }
+        
+        #sanpham ul {
+            list-style-type: none;
+        }
+        
+        #sanpham ul li a {
+            text-decoration: none;
+            color: black;
+            margin-top: 10px;
+        }
+        
+        #sanpham ul li {
+            padding: 10px;
+            border-bottom: 1px solid rgb(231, 227, 227);
+        }
+        
+        #sanpham ul li a:hover {
+            color: blue;
+        }
+        
+        #slideshow {
+            width: 1024px;
+            height: 360px;
+            float: left;
+        }
+        
+        #slideshow img {
+            width: 1022px;
+            height: 355px;
+            float: right;
+            border: white;
+            padding: 5px 0 0 0;
+            margin: 2px;
+        }
+        
+        menu {
+            border-top: 1px solid rgb(221, 221, 221);
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+        }
+        
+        menu ul {
+            list-style-type: none;
+            border: white;
+            padding: 2px;
+            margin: 2px;
+        }
+        
+        menu ul li {
+            display: inline-block;
+            position: relative;
+        }
+        
+        menu ul li:hover ul {
+            visibility: visible;
+            background: white;
+        }
+        
+        menu ul li:hover {
+            text-decoration: underline;
+        }
+        
+        menu ul li ul {
+            position: absolute;
+            display: inline-block;
+            visibility: hidden;
+            border: 1px solid rgb(226, 226, 226);
+            width: 420px;
+        }
+        
+        menu ul li ul li {
+            color: #b99323;
+            /* padding: 10px 10px; */
+            width: 200px;
+            height: 40px;
+            line-height: 40px;
+            /* border-bottom: 1px solid rgb(226, 226, 226); */
+            font-size: 20px;
+            text-align: left;
+        }
+        
+        menu ul li ul li a {
+            padding: 10px;
+        }
+        
+        menu ul li a {
+            width: 100%;
+            text-decoration: none;
+            color: black;
+            /* các chữ trang trủ ...liên hệ thành màu đen*/
+            display: block;
+            margin: 0px auto;
+            padding-left: 30px;
+            /* các lề trái 30px*/
+            padding-right: 30px;
+        }
+        
+        menu ul li a:hover {
+            color: #b99323;
+        }
+        
+        #logo img {
+            /* chữ T*/
+            width: 100px;
+            height: 150px;
+            padding-left: 50px;
+            margin: 0px;
+        }
+        
+        #logo {
+            width: 1024px;
+            height: 100px;
+            padding: 2px;
+            margin: 2px;
+            /* border-bottom:1px solid rgb(196, 196, 196); */
+            /* background: rgb(155, 153, 153); */
+        }
+        
+        #logo li {}
+        
+        .timkiem {
+            width: 180px;
+            height: 80px;
+            float: right;
+            /* cho phần tìm kiếm đăng nhập , đki từ trái sang mé lề phải */
+            padding-right: 50px;
+            /*lùi mép phải 50px*/
+        }
+        
+        .timkiem li {
+            list-style-type: none;
+            width: 50%;
+            height: 30%;
+            margin: 5px;
+        }
+        
+        .cart-amount {
+            /* giỏ hàng */
+            background-color: yellow;
+            color: black;
+            position: absolute;
+            top: -6px;
+            right: 10px;
+            height: 20px;
+            width: 20px;
+            border-radius: 10px;
+            font-size: 15px;
+            text-align: center;
+            line-height: 20px;
+            cursor: pointer;
+        }
+        
+        li img {
+            width: 5px;
+            height: 5px;
+        }
+        
+        #logo p {
+            text-align: right;
+            margin: 10px;
+        }
+        
+        #logo p:last-child {
+            position: absolute;
+        }
+        
+        #logo p a {
+            text-decoration: none;
+        }
+        
+        nav {
+            width: 1014px;
+            padding: 10px;
+            margin: 15px;
+            border: white;
+            text-align: center;
+        }
+        
+        nav h1 {
+            color: black;
+            text-align: center;
+            margin-top: 50px;
+            font-size: 25px;
+        }
+        
+        nav hr {
+            width: 180px;
+            margin-left: 41%;
+            /* diều chỉnh gạch chân ở phần chúng tôi cam kết ...khách hàng */
+        }
+        
+        nav #spban img {
+            width: 99%;
+            padding: 1px;
+        }
+        
+        #spban {
+            width: 24%;
+            padding: 30px 0 30px 0;
+            margin: 2px;
+            height: 350px;
+            float: left;
+            /* đẩy các biểu tượng đồng hồ sang phải*/
+        }
+        
+        #spban a {
+            text-align: center;
+            text-decoration: none;
+        }
+        
+        .product-img {
+            /* chỉnh kích thước ảnh đồng hồ */
+            width: 99%;
+            height: 70%;
+        }
+        
+        .product-img:hover {
+            transform: scale(1.2);
+            /* di chuyển con trỏ đến hình ảnh đồng hồ và nó tự phóng to ra */
+            transition: 0.5s;
+        }
+        
+        #spban label s {
+            /* sửa màu của giá tiền bị gạch giữa từ màu đen xang xám( gray)*/
+            color: grey;
+        }
+        
+        .product-price {
+            /* đổi màu của giá tiền từ đen sang đỏ ( red) */
+            color: red;
+        }
+        
+        #spban label {
+            margin-top: 10px;
+            padding: 5px;
+            list-style: none;
+            /* điều chỉnh kí hiệu đằng trc giá tiền , lúc đầu là dấu châm chọn none để k hiển thị gì cả */
+            display: inline-block;
+        }
+        
+        .product-name {
+            margin-top: 20px;
+            color: black;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            padding-top: 30px;
+        }
+        
+        .product-name:hover {
+            color: #b99323;
+        }
+        
+        .btn-buy {
+            background-color: red;
+            color: #FFF;
+            line-height: 28px;
+            width: 100px;
+            border: none;
+            border-radius: 5px;
+            margin: 10px 5px;
+            opacity: 0.8;
+        }
+        
+        .btn-buy:hover {
+            cursor: pointer;
+            opacity: 1.0;
+        }
+        
+        .btn-view {
+            background-color: #CCC;
+            color: black;
+            line-height: 28px;
+            width: 100px;
+            border: none;
+            border-radius: 5px;
+            margin: 10px 5px;
+            opacity: 0.8;
+        }
+        
+        .btn-view:hover {
+            cursor: pointer;
+            opacity: 1.0;
+        }
+        
+        section:after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        
+        .footer .container {
+            padding: 18px;
+        }
+        
+        .footer.container {
+            padding-top: 40px;
+        }
+        
+        .footer p {
+            margin: 6px 0;
+        }
+        
+        .footer h3 {
+            color: black;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        
+        .footer a {
+            text-decoration: none;
+            /* xóa dấu gạch chân */
+            color: black;
+        }
+        
+        .footer a:hover {
+            color: #fff;
+        }
+        
+        .footer i {
+            font-size: 18px !important;
+        }
+        
+        .footer .col-4 {
+            width: 33.333%;
+            float: left;
+            /* đẩy phần thông tin thanh ly và theo dõi ctoi qua phải */
+        }
+        
+        .social-icon i {
+            font-size: 24px;
+            border: 1px solid #ccc;
+            width: 15px;
+            padding: 10px;
+            margin-right: 5px;
+            border-radius: 50%;
+            color: #fff;
+        }
+        
+        .social-icon i:hover {
+            opacity: 0.7;
+        }
+        
+        .social-icon .fa-facebook {
+            background: #3B5998;
+            color: #fff;
+        }
+        
+        .social-icon .fa-twitter {
+            background: #55ACEE;
+            color: #fff;
+        }
+        
+        .social-icon .fa-google {
+            background: #dd4b39;
+            color: #fff;
+        }
+        
+        .social-icon .fa-youtube {
+            background: #bb0000;
+            color: #fff;
+        }
+        
+        .social-icon .fa-instagram {
+            background: #ea4c89;
+            color: #fff;
+        }
+        
+        .copy {
+            content: "";
+            clear: both;
+        }
+        
+        .copy p {
+            background-color: #aaa;
+            text-align: center;
+            /* căn giữa chữ by Dat Kem */
+            height: 20px;
+            line-height: 20px;
+            font-size: 14px;
+            color: white;
+        }
+        /* .ad li a {
+        float: right;
+        margin-top: -90px;
+        color: blue;
+    } */

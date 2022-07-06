@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./dangnhap.css">
+    <script>
+        function kemtraten() {
+            var ten = document.getElementById("txtTen").value;
+            if (ten == "") {
+                document.getElementById("ktra1").innerHTML = "Vui lòng nhập tên đăng nhập";
+            } else {
+                if (ten.Length < 6 || ten.Length > 12) {
+                    document.getElementById("ktra1").innerHTML = "Tên đăng nhập gồm 6-12 kí tự ";
+                } else {
+                    document.getElementById("ktra1").innerHTML = "";
+                }
+
+                for (i = 0; i < ten.Length; i++) {
+                    if (!isNaN(ten[i])) {
+                        document.getElementById("ktra1").innerHTML = "Không được nhập ký tự số";
+                    }
+
+                }
+
+
+            }
+        }
+    </script>
+
+</head>
+
+<body style="background-color: black;">
+    <form action="" method="POST">
+        <p>ĐĂNG NHẬP</p>
+        <div class="container">
+            <p><b>Tên Đăng Nhập</b></p>
+            <p><input id="txtTen" type="text" placeholder="Điền tài khoản" onblur="kiemtraten()">
+                <span style="color : red; font-size: 12px;" id="ktra1"></span></p>
+            </p><b>Mật Khẩu</b>
+            <p><input type="password" placeholder="Điền mật khẩu"></p>
+            <p><b><input type="checkbox">Ghi nhớ</b></p>
+            <p><button type="submit" style="font-size: 15px;">Đăng Nhập</button></p>
+        </div>
+        <div class="container" style="margin-top: -100px;">
+            <button type="button" class="signup"><a href="./dangky.html" style="text-decoration: none; color: white;">Đăng Ký</a></button>
+            <span class="psw"><a href="#" style="text-decoration: none;"> Quên mật khẩu?</a></span>
+        </div>
+    </form>
+</body>
+
+</html>
